@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Executive Pillar — Demo Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .tab-btn.active {
+      background-color: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
+
+  <!-- TOP PREVIEW BAR FOR CLIENT -->
+  <aside aria-label="Demo Bar" class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800 px-4 py-2 flex items-center justify-between text-xs text-white">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span class="text-slate-300 font-medium">Contoh Demo Produk: <b>The Executive Pillar</b></span>
+    </div>
+    <a href="https://wa.me/62881026886561?text=Halo,%20saya%20tertarik%20dengan%20desain%20Executive%20Pillar%20(Rp%20320rb/bulan)" 
+       target="_blank" 
+       class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center gap-1.5 transition-colors shadow-sm">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+      <span>Pesan Desain Ini (320k/bln)</span>
+    </a>
+  </aside>
+
+  <!-- NAVBAR -->
+  <nav class="border-b border-slate-200 bg-white sticky top-9 z-40">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2 font-bold text-lg text-slate-900">
+        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+        </div>
+        <span>PT Solusi Investasi Prima</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-6 text-xs text-slate-600 font-medium">
+        <a href="#about" class="hover:text-slate-900">Tentang Kami</a>
+        <a href="#solutions" class="hover:text-slate-900">Solusi Bisnis</a>
+        <a href="#performance" class="hover:text-slate-900">Kinerja</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors">Konsultasi Bisnis</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH REAL EDITORIAL PHOTOGRAPHY -->
+  <section class="pt-16 pb-20 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+          <span>Mitra Terpercaya 300+ Perusahaan Nasional</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+          Akselerasi Pertumbuhan Modal & Tata Kelola Aset Berkelanjutan.
+        </h1>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+          Kami memadukan analisis risiko mendalam, kepatuhan hukum komersial, dan jaringan pendanaan strategis untuk mengantarkan korporasi Anda ke tingkat berikutnya.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#contact" class="px-6 py-3 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-white transition-colors shadow-sm flex items-center gap-2">
+            <span>Mulai Diskusi Kemitraan</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#performance" class="px-6 py-3 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors">
+            Lihat Laporan Kinerja
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with High-End Imagery -->
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-slate-50">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+               alt="Modern Office Tower" 
+               class="w-full h-72 object-cover">
+          <div class="p-6 bg-white">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Dana Kelola Aktif</div>
+                <div class="text-xl font-bold text-slate-900">$450M+ USD</div>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                Audit AAA+
+              </span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-slate-600">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-600 shrink-0"></i>
+              <span>Berlisensi & diawasi penuh oleh otoritas regulasi resmi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section id="performance" class="py-10 border-y border-slate-200 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">$450M+</div>
+        <div class="text-xs text-slate-500 mt-1 font-medium">Aset dalam Pengawasan</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">320+</div>
+        <div class="text-xs text-slate-500 mt-1 font-medium">Klien Korporat Aktif</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">99.8%</div>
+        <div class="text-xs text-slate-500 mt-1 font-medium">Retensi Kepuasan Klien</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">12 Tahun</div>
+        <div class="text-xs text-slate-500 mt-1 font-medium">Integritas Pasar Teruji</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SOLUTIONS SECTION (TAB SWITCHER) -->
+  <section id="solutions" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Solusi Terukur</span>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Disesuaikan dengan Fase Skala Bisnis Anda</h2>
+      <p class="text-slate-600 text-sm mt-2">Klik kategori di bawah untuk melihat cakupan layanan terintegrasi kami.</p>
+    </div>
+
+    <!-- Solution Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+      <button onclick="switchSolutionTab('enterprise')" id="tab-enterprise" class="tab-btn active px-4 py-2 rounded-xl text-xs font-semibold border border-slate-200 transition-all">
+        Holding & Enterprise
+      </button>
+      <button onclick="switchSolutionTab('mid')" id="tab-mid" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all">
+        Perusahaan Berkembang (SME)
+      </button>
+      <button onclick="switchSolutionTab('legal')" id="tab-legal" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all">
+        Audit & Kepatuhan Legal
+      </button>
+    </div>
+
+    <!-- Tab Content Container -->
+    <div id="solution-content" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Populated via JS -->
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FAQ SECTION -->
+  <section id="faq" class="py-16 px-6 max-w-4xl mx-auto border-t border-slate-200">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Tanya Jawab</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pertanyaan yang Sering Diajukan</h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(1)">
+          <span>Berapa lama proses asesmen awal perusahaan dilakukan?</span>
+          <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform"></i>
+        </h4>
+        <p id="faq-desc-1" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
+          Tahap evaluasi dokumen awal dan pemetaan kelayakan modal biasanya memerlukan waktu 5 hingga 7 hari kerja sejak seluruh data pendukung diserahkan secara lengkap.
+        </p>
+      </div>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(2)">
+          <span>Bagaimana jaminan kerahasiaan data finansial perusahaan kami?</span>
+          <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform"></i>
+        </h4>
+        <p id="faq-desc-2" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
+          Setiap perikatan diawali dengan Non-Disclosure Agreement (NDA) yang mengikat secara hukum dengan standar enkripsi data korporasi tertinggi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="py-12 border-t border-slate-200 bg-slate-50 px-6 text-center text-xs text-slate-600">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 PT Solusi Investasi Prima. Seluruh Hak Cipta Dilindungi Undang-Undang.</div>
+      <div class="flex gap-4">
+        <span>Gedung Bursa Efek Indonesia Lt. 18, Jakarta</span>
+        <span>•</span>
+        <span>inquiry@investasiprima.id</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const solutionsData = {
+      enterprise: [
+        { icon: 'shield-check', title: 'Restrukturisasi Modal Konsolidasi', desc: 'Optimalisasi struktur neraca induk perseroan dan anak perusahaan untuk efisiensi beban modal.' },
+        { icon: 'trending-up', title: 'Penasihat Merger & Akuisisi', desc: 'Due diligence komprehensif mulai dari valuasi, negosiasi komersial, hingga integrasi operasional.' },
+        { icon: 'globe', title: 'Ekspansi Pasar Lintas Batas', desc: 'Pendampingan investasi dan izin pembukaan entitas di Singapura, Hong Kong, dan Tokyo.' }
+      ],
+      mid: [
+        { icon: 'zap', title: 'Akselerasi Arus Kas Operasional', desc: 'Audit rantai pasok dan restrukturisasi piutang agar modal kerja tetap likuid.' },
+        { icon: 'bar-chart-3', title: 'Persiapan Pendanaan Seri Lanjutan', desc: 'Penyusunan financial model dan data room profesional untuk investor institusi.' },
+        { icon: 'users', title: 'Pendampingan Tata Kelola (GCG)', desc: 'Penerapan SOP keuangan internal dan pelaporan berkala berstandar baku.' }
+      ],
+      legal: [
+        { icon: 'file-check', title: 'Audit Kepatuhan Hukum Komersial', desc: 'Mitigasi sengketa kontrak kerja sama, hak paten, dan perizinan kementerian terkait.' },
+        { icon: 'lock', title: 'Perlindungan Aset Eksekutif', desc: 'Struktur trust dan proteksi legal bagi jajaran direksi dan pemegang saham pengendali.' },
+        { icon: 'scale', title: 'Penasihat Perpajakan Strategis', desc: 'Perencanaan kepatuhan pajak terpadu sesuai undang-undang harmonisasi terbaru.' }
+      ]
+    };
+
+    function switchSolutionTab(tabKey) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.className = 'tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all';
+      });
+      document.getElementById(`tab-${tabKey}`).className = 'tab-btn active px-4 py-2 rounded-xl text-xs font-semibold border border-slate-900 transition-all';
+
+      const container = document.getElementById('solution-content');
+      const items = solutionsData[tabKey];
+      container.innerHTML = items.map(item => `
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+            <i data-lucide="${item.icon}" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">${item.title}</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    // Initialize initial tab
+    switchSolutionTab('enterprise');
+
+    function toggleFaq(num) {
+      const desc = document.getElementById(`faq-desc-${num}`);
+      const icon = document.getElementById(`faq-icon-${num}`);
+      if (desc.classList.contains('hidden')) {
+        desc.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        desc.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>

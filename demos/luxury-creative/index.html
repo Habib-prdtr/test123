@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Spatial — Demo Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .serif-title { font-family: 'Playfair Display', serif; }
+    .filter-btn.active {
+      background-color: #1c1917;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="bg-[#fafaf9] text-stone-800 antialiased selection:bg-stone-900 selection:text-white">
+
+  <!-- TOP PREVIEW BAR FOR CLIENT -->
+  <aside aria-label="Demo Bar" class="sticky top-0 z-50 bg-stone-900 border-b border-stone-800 px-4 py-2 flex items-center justify-between text-xs text-white">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+      <span class="text-stone-300 font-medium">Contoh Demo Produk: <b>Atelier Spatial (Luxury)</b></span>
+    </div>
+    <a href="https://wa.me/62881026886561?text=Halo,%20saya%20tertarik%20dengan%20desain%20Atelier%20Studio%20(Rp%20320rb/bulan)" 
+       target="_blank" 
+       class="px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-950 font-semibold flex items-center gap-1.5 transition-colors shadow-sm">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+      <span>Pesan Desain Ini (320k/bln)</span>
+    </a>
+  </aside>
+
+  <!-- NAVBAR -->
+  <nav class="border-b border-stone-200 bg-white sticky top-9 z-40">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-widest uppercase serif-title text-stone-950">
+        Atelier<span class="text-amber-800">.</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-8 text-xs uppercase tracking-widest text-stone-600 font-medium">
+        <a href="#karya" class="hover:text-stone-950 transition-colors">Portofolio</a>
+        <a href="#filosofi" class="hover:text-stone-950 transition-colors">Filosofi</a>
+        <a href="#layanan" class="hover:text-stone-950 transition-colors">Layanan</a>
+        <a href="#kontak" class="px-4 py-2 rounded-full bg-stone-900 text-white hover:bg-stone-800 transition-colors">Konsultasi Desain</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="py-20 px-6 max-w-5xl mx-auto text-center">
+    <span class="inline-block px-4 py-1.5 rounded-full text-[11px] uppercase tracking-widest font-semibold bg-stone-200 text-stone-800 mb-6">
+      Architecture • Master Planning • Spatial Art
+    </span>
+    <h1 class="serif-title text-4xl sm:text-6xl font-normal text-stone-950 tracking-tight leading-[1.18] mb-6">
+      Menghadirkan Ruang yang Memancarkan Ketenangan & Keabadian.
+    </h1>
+    <p class="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+      Perpaduan kemurnian material alam, presisi geometri kontemporer, dan pencahayaan dramatis untuk hunian privat, villa resor, dan paviliun komersial bernilai tinggi.
+    </p>
+    <div class="flex items-center justify-center gap-3">
+      <a href="#karya" class="px-7 py-3 rounded-full text-xs font-semibold bg-stone-950 text-white hover:bg-stone-800 transition-colors uppercase tracking-wider shadow-sm">
+        Jelajahi Galeri Karya
+      </a>
+      <a href="#filosofi" class="px-7 py-3 rounded-full text-xs font-semibold bg-white border border-stone-300 text-stone-800 hover:bg-stone-100 transition-colors uppercase tracking-wider">
+        Filosofi Desain
+      </a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO WITH REAL HIGH-END PHOTOS & FILTER -->
+  <section id="karya" class="py-16 px-6 max-w-6xl mx-auto border-t border-stone-200">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-bold">Koleksi Terpilih</span>
+        <h2 class="serif-title text-3xl text-stone-950 mt-1">Eksplorasi Ruang & Struktur</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex items-center gap-2">
+        <button onclick="filterGallery('all')" id="filter-all" class="filter-btn active px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-300 transition-colors">
+          Semua
+        </button>
+        <button onclick="filterGallery('residence')" id="filter-residence" class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-stone-700 border border-stone-300 hover:bg-stone-100 transition-colors">
+          Residensial
+        </button>
+        <button onclick="filterGallery('commercial')" id="filter-commercial" class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-stone-700 border border-stone-300 hover:bg-stone-100 transition-colors">
+          Komersial & Galeri
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery-container">
+      <div class="gallery-item residence group cursor-pointer">
+        <div class="h-96 rounded-2xl overflow-hidden border border-stone-200 relative shadow-sm">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" 
+               alt="The Obsidian Residence" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="flex items-center justify-between mt-4">
+          <div>
+            <h3 class="serif-title text-xl text-stone-950">The Obsidian Residence</h3>
+            <p class="text-xs text-stone-500 mt-0.5">Hunian Tropis Kontemporer • Ubud, Bali (2025)</p>
+          </div>
+          <span class="text-xs font-mono text-stone-400">850 m²</span>
+        </div>
+      </div>
+
+      <div class="gallery-item commercial group cursor-pointer">
+        <div class="h-96 rounded-2xl overflow-hidden border border-stone-200 relative shadow-sm">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" 
+               alt="Pavilion Lumière" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="flex items-center justify-between mt-4">
+          <div>
+            <h3 class="serif-title text-xl text-stone-950">Pavilion Lumière</h3>
+            <p class="text-xs text-stone-500 mt-0.5">Galeri Seni & Ruang Budaya • Menteng, Jakarta (2026)</p>
+          </div>
+          <span class="text-xs font-mono text-stone-400">1.200 m²</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak" class="py-14 border-t border-stone-200 bg-white px-6 text-center text-xs text-stone-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Atelier Spatial Architecture & Planning. Seluruh Hak Cipta.</div>
+      <div class="flex gap-4">
+        <span>Jl. Senopati No. 42, Kebayoran Baru, Jakarta</span>
+        <span>•</span>
+        <span>inquiry@atelier-spatial.id</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function filterGallery(type) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.className = 'filter-btn px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-stone-700 border border-stone-300 hover:bg-stone-100 transition-colors';
+      });
+      document.getElementById(`filter-${type}`).className = 'filter-btn active px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-900 transition-colors';
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (type === 'all' || item.classList.contains(type)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
