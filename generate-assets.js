@@ -32,8 +32,8 @@ execSync(`"${edgePath}" --headless --disable-gpu --no-pdf-header-footer --run-al
 fs.copyFileSync(posterPdfRoot, posterPdfDocs);
 console.log('✓ Poster PDF generated:', fs.statSync(posterPdfRoot).size, 'bytes');
 
-console.log('Generating Poster PNG Image (1080x1350)...');
-execSync(`"${edgePath}" --headless --disable-gpu --window-size=1080,1350 --hide-scrollbars --screenshot="${posterPngRoot}" "${posterHtml}"`);
+console.log('Generating Poster PNG Image 3:4 (1080x1440)...');
+execSync(`"${edgePath}" --headless --disable-gpu --window-size=1080,1440 --hide-scrollbars --screenshot="${posterPngRoot}" "${posterHtml}"`);
 fs.copyFileSync(posterPngRoot, posterPngDocs);
 console.log('✓ Poster PNG generated:', fs.statSync(posterPngRoot).size, 'bytes');
 
