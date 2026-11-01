@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Hafia.dev — Layanan Website Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    @page {
+      size: 1080px 1350px;
+      margin: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .poster-container {
+      width: 1080px;
+      height: 1350px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+  <!-- POSTER CANVAS (1080 x 1350 px) -->
+  <div class="poster-container bg-[#f8fafc] p-14 flex flex-col justify-between relative overflow-hidden border border-slate-200">
+    
+    <!-- SUBTLE BACKGROUND GRID (PURE CLEAN, NO GLOW, NO COLOR) -->
+    <div class="absolute inset-0 pointer-events-none opacity-40" 
+         style="background-size: 32px 32px; background-image: linear-gradient(to right, rgba(15,23,42,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.04) 1px, transparent 1px);">
+    </div>
+
+    <!-- TOP SECTION: BRAND & BADGE -->
+    <div class="relative z-10">
+      <div class="flex items-center justify-between pb-8 border-b border-slate-200">
+        <!-- Logo -->
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-sm">
+            <span class="text-2xl font-black text-slate-900 tracking-tight">H<span class="text-blue-600">.</span></span>
+          </div>
+          <div>
+            <div class="text-2xl font-bold tracking-tight text-slate-900">
+              Hafia<span class="text-blue-600">.dev</span>
+            </div>
+            <div class="text-xs text-slate-500 font-medium">
+              Web Development & Managed Services
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Tag -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Website as a Service (WaaS)</span>
+        </div>
+      </div>
+
+      <!-- MAIN HEADLINE -->
+      <div class="mt-10 text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-4">
+          Miliki Website Company Profile Mewah<br>Cukup <span class="text-blue-600">200 Ribuan/Bulan.</span>
+        </h1>
+        <p class="text-base text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+          Tak perlu modal awal jutaan rupiah. Terima beres dengan sistem langganan bulanan—termasuk desain berkelas, cloud hosting kilat, integrasi domain bisnis, dan gratis pembaruan konten rutin.
+        </p>
+      </div>
+    </div>
+
+    <!-- MIDDLE SECTION: 3 CLEAN PRICING TIERS -->
+    <div class="relative z-10 grid grid-cols-3 gap-5 my-auto items-stretch">
+      
+      <!-- TIER 1: STARTER -->
+      <div class="p-6 pt-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Starter Compro</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600">Basic</span>
+          </div>
+          <div class="mt-4 flex items-baseline gap-1">
+            <span class="text-2xl font-extrabold text-slate-900">Rp 280k</span>
+            <span class="text-xs text-slate-500 font-medium">/ bulan</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1.5 leading-snug">Ideal untuk CV baru, toko, atau praktisi mandiri.</p>
+
+          <ul class="mt-5 space-y-2.5 text-xs border-t border-slate-100 pt-4">
+            <li class="flex items-start gap-2 text-slate-900"><span class="text-emerald-600 font-bold">✓</span> <b>1 Halaman (One-Page Flow)</b></li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Bantuan Setup Domain Bisnis</li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Cloud Hosting Cepat & SSL</li>
+            <li class="flex items-start gap-2 text-slate-900 font-semibold"><span class="text-emerald-600 font-bold">✓</span> <b>1x Update Konten / Bulan</b></li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Tombol WhatsApp Sales</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-3 text-center border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+          Mulai Tanpa Beban
+        </div>
+      </div>
+
+      <!-- TIER 2: BUSINESS PRO (HIGHLIGHTED) -->
+      <div class="p-6 pt-8 rounded-2xl bg-white border-2 border-blue-600 shadow-md flex flex-col justify-between relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider bg-blue-600 text-white shadow-sm">
+          Paling Direkomendasikan
+        </div>
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Business Pro</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Terfavorit</span>
+          </div>
+          <div class="mt-4 flex items-baseline gap-1">
+            <span class="text-2xl font-extrabold text-slate-900">Rp 320k</span>
+            <span class="text-xs text-slate-500 font-medium">/ bulan</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1.5 leading-snug">Standar emas untuk PT, kantor cabang & agensi.</p>
+
+          <ul class="mt-5 space-y-2.5 text-xs border-t border-slate-100 pt-4">
+            <li class="flex items-start gap-2 text-slate-900 font-semibold"><span class="text-blue-600 font-bold">✓</span> <b>Hingga 5 Seksi Komprehensif</b></li>
+            <li class="flex items-start gap-2 text-slate-900"><span class="text-blue-600 font-bold">✓</span> <b>Domain & Email Bisnis Resmi</b></li>
+            <li class="flex items-start gap-2 text-blue-700 font-semibold"><span class="text-blue-600 font-bold">✓</span> <b>2x Update Konten / Bulan</b></li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-blue-600 font-bold">✓</span> Layout Editorial Berkelas</li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-blue-600 font-bold">✓</span> Monitoring 24/7 & Backup</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-3 text-center border-t border-slate-100 text-[11px] font-bold text-blue-600">
+          Pilihan Terbaik Bisnis
+        </div>
+      </div>
+
+      <!-- TIER 3: ENTERPRISE -->
+      <div class="p-6 pt-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Enterprise Custom</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600">Custom</span>
+          </div>
+          <div class="mt-4 flex items-baseline gap-1">
+            <span class="text-2xl font-extrabold text-slate-900">Rp 480k</span>
+            <span class="text-xs text-slate-500 font-medium">/ bulan</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1.5 leading-snug">Untuk grup usaha, holding & brand nasional.</p>
+
+          <ul class="mt-5 space-y-2.5 text-xs border-t border-slate-100 pt-4">
+            <li class="flex items-start gap-2 text-slate-900"><span class="text-emerald-600 font-bold">✓</span> <b>Halaman Bebas & Multi-Bahasa</b></li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Kustom Subdomain Terintegrasi</li>
+            <li class="flex items-start gap-2 text-slate-900 font-semibold"><span class="text-emerald-600 font-bold">✓</span> <b>Unlimited Update Minor</b></li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Dedicated Account Manager</li>
+            <li class="flex items-start gap-2 text-slate-700"><span class="text-emerald-600 font-bold">✓</span> Garansi SLA Uptime 99.9%</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-3 text-center border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+          Solusi Skala Besar
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STATS STRIP (4 TRUST METRICS) -->
+    <div class="relative z-10 grid grid-cols-4 gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm text-center">
+      <div>
+        <div class="text-xl font-extrabold text-slate-900">Rp 280k<span class="text-blue-600 text-xs">/bln</span></div>
+        <div class="text-[11px] text-slate-500 mt-0.5 font-medium">Biaya Masuk Terjangkau</div>
+      </div>
+      <div>
+        <div class="text-xl font-extrabold text-slate-900">0.4<span class="text-blue-600 text-xs">s</span></div>
+        <div class="text-[11px] text-slate-500 mt-0.5 font-medium">Kecepatan Buka Kilat</div>
+      </div>
+      <div>
+        <div class="text-xl font-extrabold text-slate-900">100<span class="text-blue-600 text-xs">%</span></div>
+        <div class="text-[11px] text-slate-500 mt-0.5 font-medium">Bebas Pusing Perawatan</div>
+      </div>
+      <div>
+        <div class="text-xl font-extrabold text-slate-900">5-7<span class="text-blue-600 text-xs"> Hari</span></div>
+        <div class="text-[11px] text-slate-500 mt-0.5 font-medium">Siap Langsung Tayang</div>
+      </div>
+    </div>
+
+    <!-- BOTTOM SECTION: CALL TO ACTION & CONTACT -->
+    <div class="relative z-10 pt-6 border-t border-slate-200 flex items-center justify-between">
+      <div>
+        <div class="text-sm font-bold text-slate-900">Siap Menaikkan Kredibilitas Bisnis Anda?</div>
+        <div class="text-xs text-slate-500 mt-0.5">Konsultasikan kebutuhan website perusahaan Anda bersama tim kami.</div>
+      </div>
+
+      <!-- Contact Pill -->
+      <div class="flex items-center gap-4">
+        <div class="text-right">
+          <div class="text-[10px] text-slate-400 font-medium uppercase tracking-wider">WhatsApp Konsultasi</div>
+          <div class="text-sm font-bold text-slate-900 font-mono tracking-tight">0881-0268-86561</div>
+        </div>
+        <div class="px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold text-xs flex items-center gap-2 shadow-sm">
+          <span>hafia-dev.institut.biz.id</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
