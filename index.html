@@ -50,8 +50,8 @@
       <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-semibold text-slate-600">
         <a href="#showcase" class="hover:text-slate-900 transition-colors">Katalog Desain</a>
-        <a href="#keunggulan" class="hover:text-slate-900 transition-colors">Kenapa Langganan?</a>
         <a href="#harga" class="hover:text-slate-900 transition-colors">Paket Langganan</a>
+        <a href="#keunggulan" class="hover:text-slate-900 transition-colors">Kenapa Langganan?</a>
         <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ Domain & Layanan</a>
       </nav>
 
@@ -82,12 +82,12 @@
           <span>Katalog Desain</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
-        <a href="#keunggulan" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
-          <span>Kenapa Langganan?</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
         <a href="#harga" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
           <span>Paket Langganan (280k & 320k)</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#keunggulan" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
+          <span>Kenapa Langganan?</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
         <a href="#faq" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
@@ -133,26 +133,6 @@
         <i data-lucide="tag" class="w-4 h-4 text-blue-600"></i>
         <span>Mulai Rp 280k/Bulan</span>
       </a>
-    </div>
-
-    <!-- Social Proof Stats (Clean White Card Box) -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mt-10 sm:mt-16 text-left max-w-4xl mx-auto">
-      <div class="p-2 sm:p-0">
-        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">Rp 280k<span class="text-blue-600 text-sm sm:text-lg">/bln</span></div>
-        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Biaya Masuk Terjangkau</div>
-      </div>
-      <div class="p-2 sm:p-0">
-        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">0.4<span class="text-blue-600 text-sm sm:text-lg">s</span></div>
-        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Kecepatan Buka Kilat</div>
-      </div>
-      <div class="p-2 sm:p-0">
-        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">100<span class="text-blue-600 text-sm sm:text-lg">%</span></div>
-        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Bebas Pusing Perawatan</div>
-      </div>
-      <div class="p-2 sm:p-0">
-        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">5-7<span class="text-blue-600 text-sm sm:text-lg"> Hari</span></div>
-        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Siap Langsung Tayang</div>
-      </div>
     </div>
   </section>
 
@@ -310,43 +290,6 @@
     </div>
   </section>
 
-  <!-- PERBANDINGAN: BELI PUTUS VS LANGGANAN (VALUE EXPLAINER) -->
-  <section id="keunggulan" class="py-12 sm:py-16 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200">
-    <div class="p-5 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-sm">
-      <div class="max-w-2xl">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Model Bisnis Modern</span>
-        <h3 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kenapa Model Langganan Lebih Disukai Klien?</h3>
-        <p class="text-xs sm:text-sm text-slate-600 mt-2">
-          Banyak perusahaan akhirnya menelantarkan website mereka karena biaya perpanjangan server yang membengkak atau programmer awal yang sudah tidak bisa dihubungi.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
-        <!-- Model Tradisional -->
-        <div class="p-4 sm:p-5 rounded-xl bg-rose-50 border border-rose-200 text-xs text-slate-700 space-y-2.5 sm:space-y-3">
-          <div class="font-bold text-rose-700 flex items-center gap-2 text-sm">
-            <i data-lucide="x-circle" class="w-4 h-4"></i> Beli Putus Tradisional
-          </div>
-          <div class="flex items-start gap-2">❌ Bayar jutaan rupiah (Rp 5 - 10 juta) di awal sebelum melihat hasil nyata.</div>
-          <div class="flex items-start gap-2">❌ Wajib bayar sewa hosting mahal setiap tahun tanpa ada tim yang merawat.</div>
-          <div class="flex items-start gap-2">❌ Mau ubah nomor telepon/alamat? Harus bayar programmer lagi per revisi.</div>
-          <div class="flex items-start gap-2">❌ Jika server down atau error, pemilik bisnis harus pusing memperbaikinya sendiri.</div>
-        </div>
-
-        <!-- Model Langganan Kami -->
-        <div class="p-4 sm:p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800 space-y-2.5 sm:space-y-3">
-          <div class="font-bold text-emerald-700 flex items-center gap-2 text-sm">
-            <i data-lucide="check-circle-2" class="w-4 h-4"></i> Sistem Langganan Hafia.dev (WaaS)
-          </div>
-          <div class="flex items-start gap-2">✅ Modal super ringan: Cukup mulai <b>Rp 280.000 / bulan</b>.</div>
-          <div class="flex items-start gap-2">✅ Cloud hosting kilat & sertifikat keamanan SSL sudah ditanggung 100%.</div>
-          <div class="flex items-start gap-2">✅ <b>Gratis revisi/update konten</b> rutin setiap bulan tanpa biaya tambahan.</div>
-          <div class="flex items-start gap-2">✅ Tim teknis kami memantau stabilitas website 24/7. Anda fokus menjalankan bisnis!</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- PAKET HARGA LANGGANAN (PRICING CLEAN LIGHT) -->
   <section id="harga" class="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-200">
     <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
@@ -443,6 +386,63 @@
         </a>
       </div>
 
+    </div>
+
+    <!-- VALUE REASSURANCE STATS (Clean White Card Box) -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mt-10 sm:mt-14 text-left max-w-5xl mx-auto">
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">Rp 280k<span class="text-blue-600 text-sm sm:text-lg">/bln</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Biaya Masuk Terjangkau</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">0.4<span class="text-blue-600 text-sm sm:text-lg">s</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Kecepatan Buka Kilat</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">100<span class="text-blue-600 text-sm sm:text-lg">%</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Bebas Pusing Perawatan</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">5-7<span class="text-blue-600 text-sm sm:text-lg"> Hari</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Siap Langsung Tayang</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERBANDINGAN: BELI PUTUS VS LANGGANAN (VALUE EXPLAINER) -->
+  <section id="keunggulan" class="py-12 sm:py-16 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200">
+    <div class="p-5 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Model Bisnis Modern</span>
+        <h3 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kenapa Model Langganan Lebih Disukai Klien?</h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Banyak perusahaan akhirnya menelantarkan website mereka karena biaya perpanjangan server yang membengkak atau programmer awal yang sudah tidak bisa dihubungi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
+        <!-- Model Tradisional -->
+        <div class="p-4 sm:p-5 rounded-xl bg-rose-50 border border-rose-200 text-xs text-slate-700 space-y-2.5 sm:space-y-3">
+          <div class="font-bold text-rose-700 flex items-center gap-2 text-sm">
+            <i data-lucide="x-circle" class="w-4 h-4"></i> Beli Putus Tradisional
+          </div>
+          <div class="flex items-start gap-2">❌ Bayar jutaan rupiah (Rp 5 - 10 juta) di awal sebelum melihat hasil nyata.</div>
+          <div class="flex items-start gap-2">❌ Wajib bayar sewa hosting mahal setiap tahun tanpa ada tim yang merawat.</div>
+          <div class="flex items-start gap-2">❌ Mau ubah nomor telepon/alamat? Harus bayar programmer lagi per revisi.</div>
+          <div class="flex items-start gap-2">❌ Jika server down atau error, pemilik bisnis harus pusing memperbaikinya sendiri.</div>
+        </div>
+
+        <!-- Model Langganan Kami -->
+        <div class="p-4 sm:p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800 space-y-2.5 sm:space-y-3">
+          <div class="font-bold text-emerald-700 flex items-center gap-2 text-sm">
+            <i data-lucide="check-circle-2" class="w-4 h-4"></i> Sistem Langganan Hafia.dev (WaaS)
+          </div>
+          <div class="flex items-start gap-2">✅ Modal super ringan: Cukup mulai <b>Rp 280.000 / bulan</b>.</div>
+          <div class="flex items-start gap-2">✅ Cloud hosting kilat & sertifikat keamanan SSL sudah ditanggung 100%.</div>
+          <div class="flex items-start gap-2">✅ <b>Gratis revisi/update konten</b> rutin setiap bulan tanpa biaya tambahan.</div>
+          <div class="flex items-start gap-2">✅ Tim teknis kami memantau stabilitas website 24/7. Anda fokus menjalankan bisnis!</div>
+        </div>
+      </div>
     </div>
   </section>
 
