@@ -19,28 +19,28 @@
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
 
-  <!-- TOP PREVIEW BAR FOR CLIENT -->
-  <aside aria-label="Demo Bar" class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800 px-4 py-2 flex items-center justify-between text-xs text-white">
-    <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span class="text-slate-300 font-medium">Contoh Demo Produk: <b>The Executive Pillar</b></span>
+  <!-- TOP PREVIEW BAR FOR CLIENT (Mobile Responsive) -->
+  <aside aria-label="Demo Bar" class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800 px-3 sm:px-4 py-2 flex items-center justify-between text-xs text-white">
+    <div class="flex items-center gap-2 min-w-0">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+      <span class="text-slate-300 font-medium truncate text-[11px] sm:text-xs">Contoh Demo: <b>Executive Pillar</b></span>
     </div>
     <a href="https://wa.me/62881026886561?text=Halo,%20saya%20tertarik%20dengan%20desain%20Executive%20Pillar%20(Rp%20320rb/bulan)" 
        target="_blank" 
-       class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center gap-1.5 transition-colors shadow-sm">
+       class="px-2.5 sm:px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center gap-1.5 transition-colors shadow-sm shrink-0 text-[11px] sm:text-xs">
       <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-      <span>Pesan Desain Ini (320k/bln)</span>
+      <span>Pesan (320k/bln)</span>
     </a>
   </aside>
 
   <!-- NAVBAR -->
   <nav class="border-b border-slate-200 bg-white sticky top-9 z-40">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2 font-bold text-lg text-slate-900">
-        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2 font-bold text-base sm:text-lg text-slate-900 min-w-0">
+        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white shrink-0">
           <i data-lucide="building-2" class="w-4 h-4"></i>
         </div>
-        <span>PT Solusi Investasi Prima</span>
+        <span class="truncate">PT Solusi Investasi Prima</span>
       </div>
       <div class="hidden sm:flex items-center gap-6 text-xs text-slate-600 font-medium">
         <a href="#about" class="hover:text-slate-900">Tentang Kami</a>
@@ -49,29 +49,32 @@
         <a href="#faq" class="hover:text-slate-900">FAQ</a>
         <a href="#contact" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors">Konsultasi Bisnis</a>
       </div>
+      <a href="#contact" class="sm:hidden px-2.5 py-1 rounded-lg bg-slate-900 text-white text-[11px] font-semibold shrink-0">
+        Kontak
+      </a>
     </div>
   </nav>
 
   <!-- HERO SECTION WITH REAL EDITORIAL PHOTOGRAPHY -->
-  <section class="pt-16 pb-20 px-6 max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <section class="pt-10 sm:pt-16 pb-12 sm:pb-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
       <div class="lg:col-span-7 text-left">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 mb-5 sm:mb-6">
           <span class="w-2 h-2 rounded-full bg-blue-600"></span>
           <span>Mitra Terpercaya 300+ Perusahaan Nasional</span>
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.18] sm:leading-[1.15] mb-4 sm:mb-6">
           Akselerasi Pertumbuhan Modal & Tata Kelola Aset Berkelanjutan.
         </h1>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+        <p class="text-slate-600 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-xl">
           Kami memadukan analisis risiko mendalam, kepatuhan hukum komersial, dan jaringan pendanaan strategis untuk mengantarkan korporasi Anda ke tingkat berikutnya.
         </p>
         <div class="flex flex-wrap items-center gap-3">
-          <a href="#contact" class="px-6 py-3 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-white transition-colors shadow-sm flex items-center gap-2">
+          <a href="#contact" class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-white transition-colors shadow-sm flex items-center gap-2">
             <span>Mulai Diskusi Kemitraan</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="#performance" class="px-6 py-3 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors">
+          <a href="#performance" class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors">
             Lihat Laporan Kinerja
           </a>
         </div>
@@ -82,18 +85,18 @@
         <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-slate-50">
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
                alt="Modern Office Tower" 
-               class="w-full h-72 object-cover">
-          <div class="p-6 bg-white">
-            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+               class="w-full h-56 sm:h-72 object-cover">
+          <div class="p-5 sm:p-6 bg-white">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4 mb-3 sm:mb-4">
               <div>
-                <div class="text-xs text-slate-400 font-medium">Dana Kelola Aktif</div>
-                <div class="text-xl font-bold text-slate-900">$450M+ USD</div>
+                <div class="text-[11px] sm:text-xs text-slate-400 font-medium">Dana Kelola Aktif</div>
+                <div class="text-lg sm:text-xl font-bold text-slate-900">$450M+ USD</div>
               </div>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <span class="px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                 Audit AAA+
               </span>
             </div>
-            <div class="flex items-center gap-3 text-xs text-slate-600">
+            <div class="flex items-center gap-2.5 text-xs text-slate-600">
               <i data-lucide="shield-check" class="w-4 h-4 text-blue-600 shrink-0"></i>
               <span>Berlisensi & diawasi penuh oleh otoritas regulasi resmi.</span>
             </div>
@@ -104,33 +107,33 @@
   </section>
 
   <!-- STATS BAR -->
-  <section id="performance" class="py-10 border-y border-slate-200 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+  <section id="performance" class="py-8 sm:py-10 border-y border-slate-200 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">$450M+</div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Aset dalam Pengawasan</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">$450M+</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Aset dalam Pengawasan</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">320+</div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Klien Korporat Aktif</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">320+</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Klien Korporat Aktif</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">99.8%</div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Retensi Kepuasan Klien</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">99.8%</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Retensi Kepuasan Klien</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">12 Tahun</div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Integritas Pasar Teruji</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">12 Tahun</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Integritas Pasar Teruji</div>
       </div>
     </div>
   </section>
 
   <!-- INTERACTIVE SOLUTIONS SECTION (TAB SWITCHER) -->
-  <section id="solutions" class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-12">
+  <section id="solutions" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
       <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Solusi Terukur</span>
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Disesuaikan dengan Fase Skala Bisnis Anda</h2>
-      <p class="text-slate-600 text-sm mt-2">Klik kategori di bawah untuk melihat cakupan layanan terintegrasi kami.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1 sm:mt-2">Disesuaikan dengan Fase Skala Bisnis Anda</h2>
+      <p class="text-slate-600 text-xs sm:text-sm mt-1 sm:mt-2">Klik kategori di bawah untuk melihat cakupan layanan terintegrasi kami.</p>
     </div>
 
     <!-- Solution Tabs -->
@@ -153,29 +156,29 @@
   </section>
 
   <!-- INTERACTIVE FAQ SECTION -->
-  <section id="faq" class="py-16 px-6 max-w-4xl mx-auto border-t border-slate-200">
-    <div class="text-center mb-12">
+  <section id="faq" class="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto border-t border-slate-200">
+    <div class="text-center mb-8 sm:mb-12">
       <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Tanya Jawab</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pertanyaan yang Sering Diajukan</h2>
+      <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pertanyaan yang Sering Diajukan</h2>
     </div>
 
-    <div class="space-y-4">
-      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
-        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(1)">
+    <div class="space-y-3 sm:space-y-4">
+      <div class="border border-slate-200 rounded-xl p-4 sm:p-5 bg-white shadow-sm">
+        <h4 class="text-xs sm:text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(1)">
           <span>Berapa lama proses asesmen awal perusahaan dilakukan?</span>
-          <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform shrink-0 ml-2"></i>
         </h4>
-        <p id="faq-desc-1" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
+        <p id="faq-desc-1" class="text-xs text-slate-600 mt-2 sm:mt-3 leading-relaxed hidden">
           Tahap evaluasi dokumen awal dan pemetaan kelayakan modal biasanya memerlukan waktu 5 hingga 7 hari kerja sejak seluruh data pendukung diserahkan secara lengkap.
         </p>
       </div>
 
-      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
-        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(2)">
+      <div class="border border-slate-200 rounded-xl p-4 sm:p-5 bg-white shadow-sm">
+        <h4 class="text-xs sm:text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleFaq(2)">
           <span>Bagaimana jaminan kerahasiaan data finansial perusahaan kami?</span>
-          <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform shrink-0 ml-2"></i>
         </h4>
-        <p id="faq-desc-2" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
+        <p id="faq-desc-2" class="text-xs text-slate-600 mt-2 sm:mt-3 leading-relaxed hidden">
           Setiap perikatan diawali dengan Non-Disclosure Agreement (NDA) yang mengikat secara hukum dengan standar enkripsi data korporasi tertinggi.
         </p>
       </div>
@@ -183,12 +186,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer id="contact" class="py-12 border-t border-slate-200 bg-slate-50 px-6 text-center text-xs text-slate-600">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer id="contact" class="py-8 sm:py-12 border-t border-slate-200 bg-slate-50 px-4 sm:px-6 text-center text-xs text-slate-600">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
       <div>© 2026 PT Solusi Investasi Prima. Seluruh Hak Cipta Dilindungi Undang-Undang.</div>
-      <div class="flex gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px] sm:text-xs">
         <span>Gedung Bursa Efek Indonesia Lt. 18, Jakarta</span>
-        <span>•</span>
+        <span class="hidden sm:inline">•</span>
         <span>inquiry@investasiprima.id</span>
       </div>
     </div>

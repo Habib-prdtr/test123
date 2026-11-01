@@ -2,7 +2,7 @@
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Hafia.dev — Jasa Pembuatan Website Company Profile (Langganan Mulai 280k/bln)</title>
   <!-- Favicon Hafia.dev (Subtle, Clean Light Theme) -->
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
@@ -29,141 +29,183 @@
     }
   </script>
 </head>
-<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white relative overflow-x-hidden">
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white relative overflow-x-hidden pb-24 sm:pb-0">
 
   <!-- Subtle Architecture Grid Background (Clean & Crisp, No Glow) -->
   <div class="fixed inset-0 subtle-grid pointer-events-none -z-10 opacity-60"></div>
 
-  <!-- NAVIGATION (Solid Clean White Header, No Glass Effect) -->
+  <!-- NAVIGATION (Solid Clean White Header, Mobile Optimized) -->
   <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm">
-          <img src="./assets/images/favicon.svg" alt="Hafia.dev" class="w-7 h-7">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm group-hover:border-slate-300 transition-colors">
+          <img src="./assets/images/favicon.svg" alt="Hafia.dev" class="w-6 h-6 sm:w-7 sm:h-7">
         </div>
-        <span class="text-xl font-bold tracking-tight text-slate-900">
+        <span class="text-lg sm:text-xl font-bold tracking-tight text-slate-900">
           Hafia<span class="text-blue-600">.dev</span>
         </span>
-      </div>
+      </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-semibold text-slate-600">
         <a href="#showcase" class="hover:text-slate-900 transition-colors">Katalog Desain</a>
         <a href="#keunggulan" class="hover:text-slate-900 transition-colors">Kenapa Langganan?</a>
         <a href="#harga" class="hover:text-slate-900 transition-colors">Paket Langganan</a>
         <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ Domain & Layanan</a>
       </nav>
 
-      <div class="flex items-center gap-3">
+      <!-- Desktop CTA & Mobile Hamburger Controls -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- WhatsApp CTA (Desktop / Tablet) -->
         <a href="https://wa.me/62881026886561?text=Halo%20Hafia.dev,%20saya%20tertarik%20dengan%20paket%20langganan%20website%20company%20profile" 
            target="_blank"
-           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-sm">
+           class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-sm">
           <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
           <span>Konsultasi WhatsApp</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button onclick="toggleMobileMenu()" 
+                id="hamburger-btn" 
+                aria-label="Buka Menu" 
+                class="md:hidden p-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors flex items-center justify-center min-w-[42px] min-h-[42px]">
+          <i data-lucide="menu" id="hamburger-icon" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 shadow-xl px-5 py-4 space-y-3 transition-all">
+      <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
+        <a href="#showcase" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
+          <span>Katalog Desain</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#keunggulan" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
+          <span>Kenapa Langganan?</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#harga" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
+          <span>Paket Langganan (280k & 320k)</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#faq" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-slate-50 flex items-center justify-between">
+          <span>FAQ Domain & Layanan</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+      </nav>
+      <div class="pt-2 border-t border-slate-100">
+        <a href="https://wa.me/62881026886561?text=Halo%20Hafia.dev,%20saya%20tertarik%20dengan%20paket%20langganan%20website%20company%20profile" 
+           target="_blank"
+           class="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-sm">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>Chat WhatsApp Sekarang</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="pt-16 pb-14 px-6 max-w-5xl mx-auto text-center">
+  <!-- HERO SECTION (Mobile Thumb-Friendly & Scaled) -->
+  <section class="pt-10 sm:pt-16 pb-10 sm:pb-14 px-4 sm:px-6 max-w-5xl mx-auto text-center">
     <!-- Solid Badge -->
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 mb-8 shadow-sm">
+    <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-[11px] sm:text-xs font-semibold text-slate-700 mb-6 sm:mb-8 shadow-sm">
       <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-      <span>Website as a Service (WaaS) • Fleksibel Tanpa Modal Awal Puluhan Juta</span>
+      <span>Website as a Service (WaaS) • Tanpa Modal Awal Jutaan</span>
     </div>
 
     <!-- Main Headline (Crisp Dark Typography) -->
-    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-6">
-      Miliki Website Compro Mewah, Cukup <span class="text-blue-600">200 Ribuan/Bulan.</span>
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.18] sm:leading-[1.15] mb-5 sm:mb-6">
+      Miliki Website Compro Mewah, Cukup <span class="text-blue-600 block sm:inline mt-1 sm:mt-0">200 Ribuan/Bulan.</span>
     </h1>
 
-    <p class="text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+    <p class="text-slate-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
       Tak perlu keluar modal awal Rp 5 - 10 juta. Terima beres dengan sistem langganan bulanan—sudah termasuk desain berkelas, cloud hosting kilat, integrasi domain bisnis, dan gratis perbaikan/update konten rutin.
     </p>
 
     <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#showcase" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold bg-slate-900 hover:bg-slate-800 text-white shadow-sm transition-all flex items-center justify-center gap-2">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none">
+      <a href="#showcase" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl font-semibold bg-slate-900 hover:bg-slate-800 text-white shadow-sm transition-all flex items-center justify-center gap-2 text-sm">
         <span>Uji Coba Demo Interaktif</span>
         <i data-lucide="arrow-down" class="w-4 h-4"></i>
       </a>
-      <a href="#harga" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 shadow-sm transition-all flex items-center justify-center gap-2">
+      <a href="#harga" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 shadow-sm transition-all flex items-center justify-center gap-2 text-sm">
         <i data-lucide="tag" class="w-4 h-4 text-blue-600"></i>
         <span>Mulai Rp 280k/Bulan</span>
       </a>
     </div>
 
     <!-- Social Proof Stats (Clean White Card Box) -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mt-16 text-left max-w-4xl mx-auto">
-      <div>
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">Rp 280k<span class="text-blue-600 text-lg">/bln</span></div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Biaya Masuk Terjangkau</div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mt-10 sm:mt-16 text-left max-w-4xl mx-auto">
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">Rp 280k<span class="text-blue-600 text-sm sm:text-lg">/bln</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Biaya Masuk Terjangkau</div>
       </div>
-      <div>
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">0.4<span class="text-blue-600 text-lg">s</span></div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Kecepatan Buka Kilat</div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">0.4<span class="text-blue-600 text-sm sm:text-lg">s</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Kecepatan Buka Kilat</div>
       </div>
-      <div>
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">100<span class="text-blue-600 text-lg">%</span></div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Bebas Pusing Perawatan</div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">100<span class="text-blue-600 text-sm sm:text-lg">%</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Bebas Pusing Perawatan</div>
       </div>
-      <div>
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">5-7<span class="text-blue-600 text-lg"> Hari</span></div>
-        <div class="text-xs text-slate-500 mt-1 font-medium">Siap Langsung Tayang</div>
+      <div class="p-2 sm:p-0">
+        <div class="text-xl sm:text-3xl font-extrabold text-slate-900">5-7<span class="text-blue-600 text-sm sm:text-lg"> Hari</span></div>
+        <div class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium">Siap Langsung Tayang</div>
       </div>
     </div>
   </section>
 
   <!-- INTERACTIVE SHOWCASE & REAL IFRAME MOCKUP -->
-  <section id="showcase" class="py-16 px-6 max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+  <section id="showcase" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
       <div>
         <div class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">Interactive Sandbox</div>
-        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">Eksplorasi Desain Company Profile</h2>
-        <p class="text-slate-600 mt-1 max-w-lg text-sm sm:text-base">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Eksplorasi Desain Company Profile</h2>
+        <p class="text-slate-600 mt-1 max-w-lg text-xs sm:text-base">
           Coba ganti mode perangkat (Desktop vs HP) dan jelajahi website demo yang sedang berjalan langsung di bawah ini.
         </p>
       </div>
 
       <!-- DEVICE SWITCHER BUTTONS -->
-      <div class="flex items-center gap-1.5 p-1 bg-slate-200 border border-slate-300 rounded-2xl self-start md:self-auto">
+      <div class="flex items-center gap-1 p-1 bg-slate-200 border border-slate-300 rounded-2xl self-start md:self-auto shrink-0">
         <button id="btn-desktop" onclick="setDeviceView('desktop')" 
-          class="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-900 shadow-sm border border-slate-200 transition-all">
-          <i data-lucide="monitor" class="w-4 h-4"></i>
+          class="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold bg-white text-slate-900 shadow-sm border border-slate-200 transition-all">
+          <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
           <span>Desktop</span>
         </button>
         <button id="btn-mobile" onclick="setDeviceView('mobile')" 
-          class="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">
-          <i data-lucide="smartphone" class="w-4 h-4"></i>
+          class="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
           <span>Mobile (HP)</span>
         </button>
       </div>
     </div>
 
-    <!-- THE DEVICE MOCKUP FRAME (Clean Solid Browser Frame) -->
-    <div class="flex justify-center mb-10">
-      <div id="device-mockup" class="w-full max-w-5xl rounded-2xl border border-slate-300 bg-white shadow-xl overflow-hidden flex flex-col h-[650px]">
+    <!-- THE DEVICE MOCKUP FRAME (Responsive Height & Touch Friendly) -->
+    <div class="flex justify-center mb-6 sm:mb-8">
+      <div id="device-mockup" class="w-full max-w-5xl rounded-2xl border border-slate-300 bg-white shadow-xl overflow-hidden flex flex-col h-[460px] sm:h-[560px] md:h-[650px]">
         
         <!-- Mockup Browser Header Bar -->
-        <div class="px-5 py-3.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between shrink-0">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
+        <div class="px-3 sm:px-5 py-2.5 sm:py-3.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-300 inline-block"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-300 inline-block"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-300 inline-block"></span>
           </div>
 
-          <!-- Dynamic Browser URL bar -->
-          <div class="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-700 font-mono tracking-tight w-80 max-w-[50%] truncate justify-center shadow-sm">
-            <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
-            <span id="mockup-url">https://pt-solusi-investasi.com</span>
+          <!-- Dynamic Browser URL bar (Responsive Truncate) -->
+          <div class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg bg-white border border-slate-300 text-[10px] sm:text-xs text-slate-700 font-mono tracking-tight max-w-[150px] sm:max-w-xs md:w-80 truncate justify-center shadow-sm">
+            <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+            <span id="mockup-url" class="truncate">https://pt-solusi-investasi.com</span>
           </div>
 
-          <div class="flex items-center gap-2 text-slate-600">
-            <button onclick="refreshMockupAnimation()" title="Ulangi Demo" class="hover:text-slate-900 p-1.5 rounded-lg hover:bg-slate-200 transition-colors">
-              <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+          <div class="flex items-center gap-1 sm:gap-2 text-slate-600">
+            <button onclick="refreshMockupAnimation()" title="Ulangi Demo" class="hover:text-slate-900 p-1 sm:p-1.5 rounded-lg hover:bg-slate-200 transition-colors">
+              <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i>
             </button>
-            <button onclick="openFullscreenDemo()" title="Buka Layar Penuh" class="hover:text-slate-900 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 transition-colors flex items-center gap-1.5 shadow-sm">
-              <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-slate-700"></i>
+            <button onclick="openFullscreenDemo()" title="Buka Layar Penuh" class="hover:text-slate-900 text-xs font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 transition-colors flex items-center gap-1 shadow-sm">
+              <i data-lucide="maximize-2" class="w-3 h-3 text-slate-700"></i>
               <span class="hidden sm:inline">Layar Penuh</span>
             </button>
           </div>
@@ -180,29 +222,35 @@
       </div>
     </div>
 
+    <!-- Mobile Scroll Touch Helper -->
+    <div class="sm:hidden text-center text-[11px] text-slate-500 mb-8 flex items-center justify-center gap-1.5">
+      <i data-lucide="mouse-pointer" class="w-3.5 h-3.5 text-blue-600"></i>
+      <span>Anda bisa menggeser (*scroll*) langsung di dalam layar demo di atas</span>
+    </div>
+
     <!-- PRODUCT CATALOG CARDS (Clean White Cards) -->
     <div class="text-center mb-6">
       <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Pilih Gaya Industri untuk Mengganti Demo di Atas:</span>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
       
       <!-- CARD 1: Corporate & Finance -->
       <div onclick="selectTheme('corporate')" 
-           class="clean-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
+           class="clean-card p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
             Terpopuler (Corporate)
           </span>
           <span class="text-xs text-slate-400 font-mono font-medium">Pilihan #01</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
           The Executive Pillar
         </h3>
         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Dirancang untuk institusi finansial, konsultan hukum, holding company, dan B2B enterprise yang membutuhkan kredibilitas kuat dan formalitas tinggi.
         </p>
-        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="mt-4 pt-3 sm:mt-5 sm:pt-4 border-t border-slate-100 flex items-center justify-between">
           <div class="text-xs text-blue-600 font-semibold flex items-center gap-1">
             <span>Uji Coba Tampilan</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
@@ -213,20 +261,20 @@
 
       <!-- CARD 2: Tech & Startup -->
       <div onclick="selectTheme('tech')" 
-           class="clean-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+           class="clean-card p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
             Clean Modern IT
           </span>
           <span class="text-xs text-slate-400 font-mono font-medium">Pilihan #02</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
           Nexus CyberTech
         </h3>
         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Tampilan rapi dan presisi dengan simulator latensi edge, bento grid interaktif, dan status server live untuk perusahaan software & konsultan IT.
         </p>
-        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="mt-4 pt-3 sm:mt-5 sm:pt-4 border-t border-slate-100 flex items-center justify-between">
           <div class="text-xs text-indigo-600 font-semibold flex items-center gap-1">
             <span>Uji Coba Tampilan</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
@@ -237,20 +285,20 @@
 
       <!-- CARD 3: Luxury Studio & Creative -->
       <div onclick="selectTheme('luxury')" 
-           class="clean-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">
+           class="clean-card p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer shadow-sm relative group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">
             Editorial & Luxury
           </span>
           <span class="text-xs text-slate-400 font-mono font-medium">Pilihan #03</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
           Atelier Spatial
         </h3>
         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Tipografi editorial Playfair Display, filter galeri arsitektur interaktif, dan tata letak elegan untuk firma arsitektur, interior, dan studio kreatif.
         </p>
-        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="mt-4 pt-3 sm:mt-5 sm:pt-4 border-t border-slate-100 flex items-center justify-between">
           <div class="text-xs text-amber-800 font-semibold flex items-center gap-1">
             <span>Uji Coba Tampilan</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
@@ -263,19 +311,19 @@
   </section>
 
   <!-- PERBANDINGAN: BELI PUTUS VS LANGGANAN (VALUE EXPLAINER) -->
-  <section id="keunggulan" class="py-16 px-6 max-w-5xl mx-auto border-t border-slate-200">
-    <div class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-sm">
+  <section id="keunggulan" class="py-12 sm:py-16 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200">
+    <div class="p-5 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-sm">
       <div class="max-w-2xl">
         <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Model Bisnis Modern</span>
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kenapa Model Langganan Lebih Disukai Klien?</h3>
+        <h3 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kenapa Model Langganan Lebih Disukai Klien?</h3>
         <p class="text-xs sm:text-sm text-slate-600 mt-2">
           Banyak perusahaan akhirnya menelantarkan website mereka karena biaya perpanjangan server yang membengkak atau programmer awal yang sudah tidak bisa dihubungi.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
         <!-- Model Tradisional -->
-        <div class="p-5 rounded-xl bg-rose-50 border border-rose-200 text-xs text-slate-700 space-y-3">
+        <div class="p-4 sm:p-5 rounded-xl bg-rose-50 border border-rose-200 text-xs text-slate-700 space-y-2.5 sm:space-y-3">
           <div class="font-bold text-rose-700 flex items-center gap-2 text-sm">
             <i data-lucide="x-circle" class="w-4 h-4"></i> Beli Putus Tradisional
           </div>
@@ -286,7 +334,7 @@
         </div>
 
         <!-- Model Langganan Kami -->
-        <div class="p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800 space-y-3">
+        <div class="p-4 sm:p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800 space-y-2.5 sm:space-y-3">
           <div class="font-bold text-emerald-700 flex items-center gap-2 text-sm">
             <i data-lucide="check-circle-2" class="w-4 h-4"></i> Sistem Langganan Hafia.dev (WaaS)
           </div>
@@ -299,31 +347,31 @@
     </div>
   </section>
 
-  <!-- PAKET HARGA LANGGANAN (PRICING CLEAN LIGHT - TANPA JANJI DOMAIN .COM) -->
-  <section id="harga" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-200">
-    <div class="text-center max-w-2xl mx-auto mb-14">
+  <!-- PAKET HARGA LANGGANAN (PRICING CLEAN LIGHT) -->
+  <section id="harga" class="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-200">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
       <div class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">Paket Fleksibel</div>
-      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">Pilihan Paket Sesuai Skala Bisnis Anda</h2>
-      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Pilihan Paket Sesuai Skala Bisnis Anda</h2>
+      <p class="text-slate-600 mt-1 sm:mt-2 text-xs sm:text-base">
         Semua paket sudah termasuk desain modern beranimasi halus, cloud hosting kilat, dan tim pemeliharaan berkala.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
       
       <!-- Paket Starter (280k/bln) -->
-      <div class="clean-card p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div class="clean-card p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Starter Compro</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600">Basic</span>
           </div>
-          <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-3xl font-extrabold text-slate-900">Rp 280.000</span>
+          <div class="mt-3 sm:mt-4 flex items-baseline gap-1">
+            <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">Rp 280.000</span>
             <span class="text-xs text-slate-500">/ bulan</span>
           </div>
           <p class="text-xs text-slate-600 mt-2">Pilihan tepat untuk CV baru, toko, atau praktisi mandiri.</p>
-          <ul class="mt-6 space-y-3 text-xs text-slate-700">
+          <ul class="mt-5 sm:mt-6 space-y-2.5 sm:space-y-3 text-xs text-slate-700">
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> 1 Halaman Rapi & Cepat (One-Page Flow)</li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> <b>Bantuan Setup Domain Bisnis</b> (bisa pakai domain sendiri)</li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> Cloud Hosting Kilat & SSL Otomatis</li>
@@ -333,14 +381,14 @@
         </div>
         <a href="https://wa.me/62881026886561?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Starter%20Compro%20(Rp%20280rb/bulan)" 
            target="_blank"
-           class="mt-8 block text-center py-3 px-4 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">
+           class="mt-6 sm:mt-8 block text-center py-3 px-4 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">
           Pilih Paket Starter
         </a>
       </div>
 
       <!-- Paket Business Pro (320k/bln - RECOMMENDED) -->
-      <div class="clean-card p-8 rounded-2xl bg-white border-2 border-blue-600 shadow-md flex flex-col justify-between relative">
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-600 text-white shadow-sm">
+      <div class="clean-card p-6 sm:p-8 rounded-2xl bg-white border-2 border-blue-600 shadow-md flex flex-col justify-between relative">
+        <div class="absolute -top-3 sm:-top-3.5 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-600 text-white shadow-sm">
           Paling Direkomendasikan
         </div>
         <div>
@@ -348,12 +396,12 @@
             <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Business Pro</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Terfavorit</span>
           </div>
-          <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-3xl font-extrabold text-slate-900">Rp 320.000</span>
+          <div class="mt-3 sm:mt-4 flex items-baseline gap-1">
+            <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">Rp 320.000</span>
             <span class="text-xs text-slate-500">/ bulan</span>
           </div>
           <p class="text-xs text-slate-600 mt-2">Standar emas untuk PT, kontraktor, dan agensi profesional.</p>
-          <ul class="mt-6 space-y-3 text-xs text-slate-700">
+          <ul class="mt-5 sm:mt-6 space-y-2.5 sm:space-y-3 text-xs text-slate-700">
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i> Hingga 5 Seksi/Halaman Komprehensif</li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i> Layout & Tipografi Editorial Berkelas</li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i> <b>Bantuan Setup Domain & Email Bisnis Resmi</b></li>
@@ -364,24 +412,24 @@
         </div>
         <a href="https://wa.me/62881026886561?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Business%20Pro%20(Rp%20320rb/bulan)" 
            target="_blank"
-           class="mt-8 block text-center py-3.5 px-4 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+           class="mt-6 sm:mt-8 block text-center py-3.5 px-4 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
           Mulai Berlangganan (320k/bln)
         </a>
       </div>
 
       <!-- Paket Enterprise Bespoke -->
-      <div class="clean-card p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div class="clean-card p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Enterprise Custom</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600">Custom</span>
           </div>
-          <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-3xl font-extrabold text-slate-900">Rp 480.000</span>
+          <div class="mt-3 sm:mt-4 flex items-baseline gap-1">
+            <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">Rp 480.000</span>
             <span class="text-xs text-slate-500">/ bulan</span>
           </div>
           <p class="text-xs text-slate-600 mt-2">Untuk holding company atau brand berskala nasional/global.</p>
-          <ul class="mt-6 space-y-3 text-xs text-slate-700">
+          <ul class="mt-5 sm:mt-6 space-y-2.5 sm:space-y-3 text-xs text-slate-700">
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> Halaman Tanpa Batas + Dukungan Multi-bahasa</li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> <b>Kustom Domain Korporasi & Subdomain Terintegrasi</b></li>
             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i> <b>Unlimited Update Konten Minor</b></li>
@@ -390,7 +438,7 @@
         </div>
         <a href="https://wa.me/62881026886561?text=Halo,%20saya%20ingin%20diskusi%20Paket%20Enterprise%20(Rp%20480rb/bulan)" 
            target="_blank"
-           class="mt-8 block text-center py-3 px-4 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">
+           class="mt-6 sm:mt-8 block text-center py-3 px-4 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">
           Diskusi Kebutuhan
         </a>
       </div>
@@ -399,37 +447,37 @@
   </section>
 
   <!-- FAQ TRANSPARAN (MENJAWAB SOAL DOMAIN SECARA AMAN) -->
-  <section id="faq" class="py-16 px-6 max-w-4xl mx-auto border-t border-slate-200">
-    <div class="text-center mb-12">
+  <section id="faq" class="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto border-t border-slate-200">
+    <div class="text-center mb-8 sm:mb-12">
       <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Transparansi</span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pertanyaan yang Sering Diajukan</h2>
     </div>
 
-    <div class="space-y-4">
-      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
-        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(1)">
+    <div class="space-y-3 sm:space-y-4">
+      <div class="border border-slate-200 rounded-xl p-4 sm:p-5 bg-white shadow-sm">
+        <h4 class="text-xs sm:text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(1)">
           <span>Bagaimana dengan nama domain website (misalnya nama perusahaan saya)?</span>
-          <i data-lucide="chevron-down" id="main-faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          <i data-lucide="chevron-down" id="main-faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform shrink-0 ml-2"></i>
         </h4>
         <p id="main-faq-desc-1" class="text-xs text-slate-600 mt-3 leading-relaxed">
           Sangat fleksibel! Jika Anda sudah memiliki domain sendiri (misal dari Niagahoster, Domainesia, dsb.), tim kami akan menghubungkannya ke website tanpa biaya tambahan. Jika belum punya, kami akan membantu mencarikan dan mendaftarkan nama domain bisnis resmi yang tersedia sesuai nama brand Anda.
         </p>
       </div>
 
-      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
-        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(2)">
+      <div class="border border-slate-200 rounded-xl p-4 sm:p-5 bg-white shadow-sm">
+        <h4 class="text-xs sm:text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(2)">
           <span>Apakah saya harus bayar sewa server atau hosting lagi?</span>
-          <i data-lucide="chevron-down" id="main-faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          <i data-lucide="chevron-down" id="main-faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform shrink-0 ml-2"></i>
         </h4>
         <p id="main-faq-desc-2" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
           <b>Tidak ada biaya tambahan lagi.</b> Seluruh biaya server cloud berkecepatan tinggi, sertifikat keamanan SSL, dan pemantauan sistem 24/7 sudah 100% ditanggung di dalam biaya langganan bulanan Anda.
         </p>
       </div>
 
-      <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
-        <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(3)">
+      <div class="border border-slate-200 rounded-xl p-4 sm:p-5 bg-white shadow-sm">
+        <h4 class="text-xs sm:text-sm font-bold text-slate-900 flex items-center justify-between cursor-pointer" onclick="toggleMainFaq(3)">
           <span>Bagaimana jika saya ingin mengubah nomor WhatsApp atau info produk di website?</span>
-          <i data-lucide="chevron-down" id="main-faq-icon-3" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          <i data-lucide="chevron-down" id="main-faq-icon-3" class="w-4 h-4 text-slate-500 transition-transform shrink-0 ml-2"></i>
         </h4>
         <p id="main-faq-desc-3" class="text-xs text-slate-600 mt-3 leading-relaxed hidden">
           Cukup kirimkan pesan ke WhatsApp tim kami. Sesuai paket langganan Anda, kami akan langsung memperbarui teks, nomor telepon, alamat, atau foto terbaru Anda secara gratis dan cepat.
@@ -439,10 +487,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-slate-200 bg-white px-6 text-center text-xs text-slate-500">
+  <footer class="py-10 sm:py-12 border-t border-slate-200 bg-white px-4 sm:px-6 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>© 2026 Hafia.dev. Didesain dengan standar web modern.</div>
-      <div class="flex items-center gap-6">
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
         <button onclick="openTermsModal()" class="hover:text-slate-800 transition-colors">Syarat & Ketentuan</button>
         <button onclick="openPrivacyModal()" class="hover:text-slate-800 transition-colors">Kebijakan Privasi</button>
         <a href="https://wa.me/62881026886561?text=Halo%20Hafia.dev,%20saya%20ingin%20konsultasi%20pembuatan%20website" 
@@ -455,21 +503,38 @@
     </div>
   </footer>
 
+  <!-- MOBILE STICKY FLOATING QUICK-ACTION BAR (Subtle & High-Converting) -->
+  <div class="sm:hidden fixed bottom-3 left-4 right-4 z-40 bg-white border border-slate-300 shadow-2xl rounded-2xl p-2.5 flex items-center justify-between">
+    <div class="flex items-center gap-2 pl-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <div class="text-left">
+        <div class="text-[10px] text-slate-400 font-medium">Mulai 280k/bln</div>
+        <div class="text-xs font-bold text-slate-900">Konsultasi Desain</div>
+      </div>
+    </div>
+    <a href="https://wa.me/62881026886561?text=Halo%20Hafia.dev,%20saya%20ingin%20konsultasi%20pembuatan%20website" 
+       target="_blank"
+       class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-white flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
   <!-- FULLSCREEN DEMO MODAL -->
   <div id="demo-modal" class="fixed inset-0 z-50 bg-black/50 flex flex-col hidden">
     <!-- Modal Header Bar -->
-    <div class="h-14 px-6 bg-white border-b border-slate-200 flex items-center justify-between shadow-sm">
-      <div class="flex items-center gap-3">
+    <div class="h-14 px-4 sm:px-6 bg-white border-b border-slate-200 flex items-center justify-between shadow-sm shrink-0">
+      <div class="flex items-center gap-2 sm:gap-3">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-        <span id="modal-demo-title" class="text-xs font-bold text-slate-900 tracking-wide">Live Demo Preview</span>
+        <span id="modal-demo-title" class="text-xs font-bold text-slate-900 tracking-wide truncate max-w-[160px] sm:max-w-none">Live Demo Preview</span>
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 sm:gap-4">
         <a href="https://wa.me/62881026886561?text=Halo,%20saya%20suka%20dengan%20desain%20demo%20ini%20dan%20ingin%20berlangganan" 
            target="_blank" 
-           class="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors shadow-sm">
+           class="px-3 sm:px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold text-[11px] sm:text-xs flex items-center gap-1.5 transition-colors shadow-sm">
           <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-          <span>Pesan Desain Ini (Rp 320k/bln)</span>
+          <span>Pesan (320k/bln)</span>
         </a>
         <button onclick="closeFullscreenDemo()" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -486,18 +551,18 @@
   <!-- MODAL: SYARAT & KETENTUAN (TERMS OF SERVICE) -->
   <div id="terms-modal" class="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-xl w-full border border-slate-200 shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
-      <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-xs">
             <i data-lucide="file-text" class="w-4 h-4 text-blue-600"></i>
           </div>
-          <h3 class="font-bold text-slate-900 text-sm">Syarat & Ketentuan Layanan (WaaS)</h3>
+          <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Syarat & Ketentuan Layanan (WaaS)</h3>
         </div>
         <button onclick="closeTermsModal()" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
+      <div class="p-5 sm:p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
         <div>
           <h4 class="font-bold text-slate-900 mb-1">1. Model Langganan & Siklus Pembayaran</h4>
           <p>Layanan kami berjalan dengan sistem langganan bulanan (*Website as a Service*). Pembayaran dilakukan di awal setiap periode (siklus 30 hari). Tidak ada ikatan kontrak jangka panjang; Klien berhak menghentikan langganan kapan saja sebelum tanggal jatuh tempo berikutnya tanpa denda.</p>
@@ -526,18 +591,18 @@
   <!-- MODAL: KEBIJAKAN PRIVASI (PRIVACY POLICY) -->
   <div id="privacy-modal" class="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-xl w-full border border-slate-200 shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
-      <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-xs">
             <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
           </div>
-          <h3 class="font-bold text-slate-900 text-sm">Kebijakan Privasi Klien</h3>
+          <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Kebijakan Privasi Klien</h3>
         </div>
         <button onclick="closePrivacyModal()" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
+      <div class="p-5 sm:p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
         <div>
           <h4 class="font-bold text-slate-900 mb-1">1. Penggunaan Informasi Bisnis</h4>
           <p>Segala bentuk data kontak, alamat kantor, profil eksekutif, dan materi promosi yang Anda berikan semata-mata hanya dipergunakan untuk keperluan pembuatan, penayangan, dan pemeliharaan website resmi perusahaan Anda.</p>
