@@ -1,4 +1,4 @@
-// JavaScript for Vanguard Studio Showcase (Clean Light Theme)
+// JavaScript for Hafia.dev Showcase (Clean Light Theme)
 
 // 1. Initialize Icons
 if (window.lucide) {
